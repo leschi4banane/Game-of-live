@@ -1,10 +1,11 @@
 import pygame as pg
-import random
+import time
 
 def get_neighbors(x,y):
         # gets the colors of the neighboring pixels
         # the try is there incase the pixel is on the edge of the screen
         neighbors = []
+
         try: neighbors.append(screen.get_at((x-1,y)))
         except: pass
         try: neighbors.append(screen.get_at((x+1,y)))
@@ -22,7 +23,7 @@ def get_neighbors(x,y):
         try: neighbors.append(screen.get_at((x+1,y-1)))
         except: pass
 
-        # counts the number of black pixels and returns it
+        # counts the number of black pixels in neighbors and returns it
         return neighbors.count((0, 0, 0, 255))
 
 def flip_screen():
@@ -50,7 +51,7 @@ pg.init()
 Clock = pg.time.Clock()
 
 screen_size = 50
-fps_limit = 60
+fps_limit = 30
 
 # creates the screen that will be displayed
 display_screen = pg.display.set_mode((800,800))
