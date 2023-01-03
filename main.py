@@ -1,5 +1,4 @@
 import pygame as pg
-import time
 
 def get_neighbors(x,y):
         # gets the colors of the neighboring pixels
