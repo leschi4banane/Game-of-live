@@ -92,7 +92,6 @@ while run:
             # clears the screen
             if event.key == pg.K_ESCAPE:
                 screen.fill((255,255,255))
-            
 
     if play:
         # creates a now surface for the new version of the old surface
@@ -112,5 +111,6 @@ while run:
         
         # sets the new frame as the default frame
         screen.blit(new_version, (0,0))
+
 
     flip_screen()
